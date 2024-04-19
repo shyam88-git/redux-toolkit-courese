@@ -33,7 +33,7 @@ const todoSlice = createSlice({
 
         removeTodo: (state, action: PayloadAction<string | number>) => {
 
-            state.todos.filter(todo => todo.id !== action.payload);
+            state.todos = state.todos.filter(todo => todo.id !== action.payload);
         },
 
         updateTodo: (state, action: PayloadAction<{ id: string | number, name: string }>) => {
